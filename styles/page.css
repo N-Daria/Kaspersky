@@ -1,9 +1,9 @@
 .page {
   font-family: "Kaspersky Sans", Arial, Helvetica, sans-serif;
   font-style: normal;
-}
-
-h1 {
-  font-weight: 100;
-  font-size: 30px;
+  background-color: black;  
+  max-width: 1440px;
+  min-width: 360px;
+  color: white;
+  margin: 0 auto;
 }
