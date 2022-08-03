@@ -1,0 +1,97 @@
+.compatibility {
+  max-width: 250px;
+  margin: 30px auto;
+}
+
+@media (min-width: 768px) {
+  .compatibility {
+    margin: 12px 0;  
+    max-width: 100%;
+  }
+}
+
+.compatibility__text {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.3;
+  margin-bottom: 18px;
+}
+
+@media (min-width: 768px) {
+  .compatibility__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    margin: 0 10px;
+  }
+}
+
+.compatibility__list {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  justify-content: space-between;
+  max-width: 224px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .compatibility__list {
+    margin: 0;
+  }
+}
+
+/* common img styles */
+
+.compatibility__list-item {
+  height: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  /* divide line */
+  border-right: 1px solid rgba(102, 102, 102, 0.4);
+} 
+
+  /* remove divide line */
+.compatibility__list-item:last-child {
+  border-right: none;
+} 
+
+.compatibility__list-item_windows {
+  background-image: url(/images/logo/windows_logos_PNG25.svg);
+  width: 62px;
+}
+
+.compatibility__list-item_macOS {
+  background-image: url(/images/logo/1280px-MacOS_wordmark.svg);
+  width: 83px;
+}
+
+.compatibility__list-item_android {
+  background-image: url(/images/logo/Android_symbol_green_RGB.svg);
+  width: 60px;
+}
+
+.compatibility__list-item_ios {
+  background-image: url(/images/logo/IOS_logo_2010.svg);
+  width: 62px;
+}
+
+
+@media (min-width: 768px) {
+  .compatibility__list-item_windows {
+    width: 56px;
+  }
+  
+  .compatibility__list-item_macOS {
+    width: 74px;
+  }
+  
+  .compatibility__list-item_android {
+    width: 54px;
+  }
+  
+  .compatibility__list-item_ios {
+    width: 56px;
+  }
+}
