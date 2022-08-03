@@ -1,0 +1,141 @@
+.purchase {
+  background:  linear-gradient(317.5deg, rgba(0, 168, 142, 0.4) 66.18%, rgba(126, 255, 51, 0.4) 100%), #23D1AE;;
+  width: 100%;
+  max-width: 328px;
+  margin: 0 auto;
+  position: relative;
+  color: #1D1D1B;
+  padding: 20px 16px;
+}
+
+.purchase__sale {
+  display: inline-block; 
+  background-color: #8233FF;
+  padding: 10px;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  max-width: 179px;
+  color: white;
+  position: absolute;
+  top: -38px;
+  left: 0;
+}
+
+.purchase__info {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.purchase__header {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.purchase__info::before {
+  content: "";
+  width: 50px;
+  height: 56px;
+  display: inline-block;
+  background-image: url(/images/Group.svg);
+  background-repeat: no-repeat;
+  background-size: 50px;
+  background-position: center;
+  margin-right: 23px;
+}
+
+.purchase__stars {
+  display: flex;
+  margin-right: 10px;
+}
+
+.purchase__star {
+  background-image: url(/images/stars/Full.svg);
+  background-repeat: no-repeat;
+  background-size: 15px;
+  background-position: center;
+  width: 20px;
+  height: 20px;
+}
+
+.purchase__star_half {
+  background-image: url(/images/stars/Half.svg);
+}
+
+.purchase__review {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.purchase__price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  padding: 8px 0;
+}
+
+.purchase__old-price {
+  margin: 0 20px 0 0;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 1.3;
+  text-decoration: line-through;
+  color: #1D1D1B;
+  opacity: .6;
+}
+
+.purchase__new-price {
+  margin: 0;
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 1;
+  color: #1D1D1B;
+}
+
+.purchase__buy {
+  margin-top: 20px;
+}
+
+.purchase__options {
+  border: 2px solid #1D1D1B;
+  background-color: #15C1A1;
+  width: 100%;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  padding: 8px 12px;
+  text-align: center;
+}
+
+.purchase__option[selected] {
+  background-color: #7FE3CE;
+}
+
+.purchase__option[focus] {
+  background-color: red;
+  text-align: center;
+}
+
+.purchase__button {
+  width: 100%;
+  display: block;
+  text-align: center;
+  background-color: #FF3748;
+  border-radius: 3px;
+  padding: 8px;
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.3;
+  margin-top: 20px;
+  border: none;
+}
+

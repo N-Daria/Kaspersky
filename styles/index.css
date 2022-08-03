@@ -6,3 +6,10 @@
 @import url(./header/header.css);
 @import url(./content/content.css);
 @import url(./compatibility/compatibility.css);
+@import url(./purchase/purchase.css);
+
+
+.footer {
+  height: 700px;
+  background-color: black;
+}

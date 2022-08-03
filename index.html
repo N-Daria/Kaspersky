@@ -15,10 +15,10 @@
       <img src="./images/Vector.svg" alt="kaspersky" class="header__logo">
     </a>
     <select class="header__currency-list">
-      <option class="header__currency-item" selected value="gbr">gbr</option>
-      <option class="header__currency-item" value="usd">usd</option>
-      <option class="header__currency-item" value="eur">eur</option>
-      <option class="header__currency-item" value="jpy">jpy</option>
+      <option class="header__currency-item" selected>gbr</option>
+      <option class="header__currency-item">usd</option>
+      <option class="header__currency-item">eur</option>
+      <option class="header__currency-item">jpy</option>
     </select>
   </header>
 
@@ -26,7 +26,7 @@
     <div class="content__info">
       <h1 class="content__header">Don't let malware defeat you</h1>
       <p class="content__text">Protect your devices with anti&#8209;malware made for gamers.</p>
-      <ul class="content__list">
+      <!-- <ul class="content__list">
         <li class="content__list-item">
           Gaming mode: <span class="content__list-item_dimmed">Ensures optimal PC performance while you play</span>
         </li>
@@ -37,7 +37,7 @@
           Cutting-edge cybersecurity: <span class="content__list-item_dimmed">Runs on AI overseen by world&#8209;leading
             threat analysts</span>
         </li>
-      </ul>
+      </ul> -->
 
       <div class="compatibility">
         <p class="compatibility__text">Compatible with:</p>
@@ -56,7 +56,41 @@
     </div>
   </main>
 
-  <section class="adds"></section>
+  <section class="purchase">
+    <p class="purchase__sale">Save 20%</p>
+
+    <div class="purchase__info">
+      <h3 class="purchase__header">Kaspersky Internet Security</h3>
+      <div class="purchase__stars">
+        <div class="purchase__star"></div>
+        <div class="purchase__star"></div>
+        <div class="purchase__star"></div>
+        <div class="purchase__star"></div>
+        <div class="purchase__star purchase__star_half"></div>
+      </div>
+      <p class="purchase__review">(1503 reviews)</p>
+    </div>
+
+    <div class="purchase__price">
+      <p class="purchase__old-price">£34.99</p>
+      <p class="purchase__new-price">£35.99</p>
+    </div>
+
+    <div class="purchase__buy">
+      <select class="purchase__options">
+        <option class="purchase__option">3 Devices, 1 year</option>
+        <option class="purchase__option">1 Device, 1 Year £27.99</option>
+        <option class="purchase__option" value="">1 Device, 2 Years £43.99</option>
+        <option class="purchase__option" selected>3 Devices, 1 Year £35.99</option>
+        <option class="purchase__option">3 Devices, 2 Years £63.99</option>
+        <option class="purchase__option">5 Devices, 1 Year £43.99</option>
+        <option class="purchase__option">5 Devices, 2 Years £71.99</option>
+      </select>
+
+      <button class="purchase__button" type="submit">Buy Now</button>
+    </div>
+
+  </section>
 
   <footer class="footer"></footer>
 
