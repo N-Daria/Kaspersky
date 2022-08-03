@@ -1,0 +1,11 @@
+@import url(//db.onlinewebfonts.com/c/a246b8d5a19583f1aeb36a51d584344b?family=Kaspersky+Sans);
+
+@font-face {
+  font-family: "Kaspersky Sans"; 
+  src: url("//db.onlinewebfonts.com/t/a246b8d5a19583f1aeb36a51d584344b.eot"); 
+  src: url("//db.onlinewebfonts.com/t/a246b8d5a19583f1aeb36a51d584344b.eot?#iefix") format("embedded-opentype"), 
+  url("//db.onlinewebfonts.com/t/a246b8d5a19583f1aeb36a51d584344b.woff2") format("woff2"), 
+  url("//db.onlinewebfonts.com/t/a246b8d5a19583f1aeb36a51d584344b.woff") format("woff"), 
+  url("//db.onlinewebfonts.com/t/a246b8d5a19583f1aeb36a51d584344b.ttf") format("truetype"), 
+  url("//db.onlinewebfonts.com/t/a246b8d5a19583f1aeb36a51d584344b.svg#Kaspersky Sans") format("svg"); 
+}
