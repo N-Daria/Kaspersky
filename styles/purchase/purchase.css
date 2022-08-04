@@ -11,6 +11,20 @@
   right: 8px;
 }
 
+@media (min-width: 768px) {
+  .purchase {
+    margin: 8px auto;
+    max-width: 1172px;  
+    display: flex;
+    padding: 12px 28px;
+    justify-content: space-between;
+
+
+
+    left: -30px;
+  }
+}
+
 .purchase::before {
   content: "Save 20%";
   display: inline-block; 
@@ -24,6 +38,22 @@
   position: absolute;
   top: -36px;
   left: 0;
+  box-sizing: border-box;
+
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .purchase::before {
+    max-width: 285px;
+    top: -42px;
+    left: 50%;  
+    transform: translateX(-34%);    
+    font-size: 21px;
+    line-height: 1.15;
+  }
 }
 
 .purchase__info {
@@ -31,19 +61,10 @@
   flex-wrap: wrap;
 }
 
-.purchase__header {
-  font-weight: 700;
-  font-size: 21px;
-  line-height: 1.1;
-  margin: 0 0 4px;
-  max-width: 200px;
-}
-
-.purchase__text-block { 
-  display: flex;
-  flex-wrap: wrap; 
-  width: 70%;
-  margin-bottom: 20px;
+@media (min-width: 768px) {
+  .purchase__info {
+    flex-wrap: nowrap;
+  }
 }
 
 .purchase__logo {
@@ -57,9 +78,61 @@
   margin-right: 23px;
 }
 
+@media (min-width: 768px) {
+  .purchase__logo {
+    width: 180px;
+    height: 90px;
+    background-size: 80px;
+    background-position: center;
+    margin-right: 28px;
+    background-image: url(/images/kasperskyDesctopIcon.svg);
+  }
+}
+
+.purchase__text-block { 
+  display: flex;
+  flex-wrap: wrap; 
+  width: 70%;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .purchase__text-block {
+    margin-bottom: 0;
+    width: 100%;
+    display: inline-block;
+    max-width: 350px;
+  }
+}
+
+.purchase__header {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 1.1;
+  margin: 0 0 4px;
+  max-width: 200px;
+}
+
+@media (min-width: 768px) {
+  .purchase__header {
+    max-width: 400px;
+    width: 100%;
+    margin: 17px 0 8px;
+    letter-spacing: 0.5px;
+  }
+}
+
 .purchase__stars {
   display: flex;
   margin-right: 8px;
+}
+
+@media (min-width: 768px) {
+  .purchase__stars {
+    max-width: 40%;
+    display: inline-flex; 
+    margin-right: 4px;
+ }
 }
 
 .purchase__star {
@@ -82,6 +155,14 @@
   margin: 0;
 }
 
+@media (min-width: 768px) {
+  .purchase__review {
+    display: inline;
+    max-width: 40%;
+    vertical-align: super;
+  }
+}
+
 .purchase__price {
   display: flex;
   justify-content: center;
@@ -90,6 +171,17 @@
   border-top: 2px solid rgba(255, 255, 255, 0.2);
   padding: 15px 0;
   width: 100%;
+}
+
+@media (min-width: 768px) {
+  .purchase__price {
+    padding: 0;
+    border: none;
+    border-left: 2px solid rgba(255, 255, 255, 0.2);
+    border-right: 2px solid rgba(255, 255, 255, 0.2);
+    max-width: 290px;
+    min-width: 260px;
+  }
 }
 
 .purchase__old-price {
@@ -110,6 +202,13 @@
   color: #1D1D1B;
 }
 
+@media (min-width: 768px) {
+  .purchase__new-price {
+    font-size: 64px;
+    line-height: 1.25;  
+  }
+}
+
 .purchase__old-price_size_small {
   font-size: 12px;
 }
@@ -120,6 +219,14 @@
 
 .purchase__buy {
   margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+  .purchase__buy {
+    display: flex;
+    margin: 0 0 0 30px;
+    align-items: center;
+  }
 }
 
 .purchase__options {
@@ -135,6 +242,12 @@
 
 .purchase__option[selected] {
   background-color: #7FE3CE;
+}
+
+@media (min-width: 768px) {
+  .purchase__options {
+    max-width: 190px;
+  }
 }
 
 .purchase__button {
@@ -153,7 +266,12 @@
   overflow: hidden;
 }
 
-
+@media (min-width: 768px) {
+  .purchase__button {
+    margin: 0 0 0 24px;
+    width: 120px;
+  }
+}
 
 
 /* for sticky state */
