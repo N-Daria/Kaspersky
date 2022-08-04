@@ -1,4 +1,3 @@
-const body = document.querySelector('.page')
 const header = document.querySelector('.header');
 const purchase = document.querySelector('.purchase');
 const purchaseheigth = purchase.getBoundingClientRect().height;
@@ -6,42 +5,21 @@ const purchaseInfo = purchase.querySelector('.purchase__info');
 const purchaseButton = purchase.querySelector('.purchase__button');
 const purchaseList = purchase.querySelector('.purchase__options');
 const purchaseListItems = Array.from(purchaseList.options);
-
-const aa = purchaseList.querySelectorAll('.purchase__option');
-
-// purchaseListItems.forEach((element) => {
-//   element.addEventListener(('click'), () => {
-//     isSelected();
-//     element.setAttribute('selected', 'selected');
-//   })
-// })
-
-// aa.forEach((element) => {
-//   element.addEventListener('click', ff);
-// })
+let scroll = 0;
 
 
-// function ff(el) {
-//   console.log(el)
-// }
+function isSelected() {
+  let selectedElement = purchaseList.querySelector('.purchase__option[selected]');
+  if (selectedElement.getAttribute('selected') === "selected") {
+    console.log('handle selected')
+  } else {
+    console.log('initial selected')
+  }
 
-function getSelectedItem() {
-  let selectedElement = null;
-  const items = Array.from(purchaseList.options);
-  items.forEach((el) => {
-    el.selected ? selectedElement = el : '';
-  })
   return selectedElement
 }
 
-purchaseList.addEventListener(('change'), (evt) => {
-  debugger
-  isSelected(evt);
-  getSelectedItem();
-  // element.setAttribute('selected', '');
-})
-
-function isSelected(evt) {
+function cleanSelectedElements() {
   purchaseListItems.forEach((element) => {
     if (element.hasAttribute('selected')) {
       element.removeAttribute('selected');
@@ -49,36 +27,20 @@ function isSelected(evt) {
   })
 }
 
-// const selectedItemAdd = document.querySelector('.purchase__new-price');
-// const text = document.querySelector('.purchase__new-price_sticky');
+function setSelectedElement(evt) {
+  let selectedElement = null;
 
+  purchaseListItems.forEach((element) => {
+    if (evt.target.value === element.textContent) {
+      selectedElement = element;
+    }
+  })
+  selectedElement.setAttribute('selected', 'selected')
+}
 
-// если расстояние от низа окна до верзней границы purchase > высота purchase, добавить "purchase_sticky", удалить слушатель
-// добавить в псевдоэлемент текст селекта
-// добавить слушатель на кнопку -> вызвать функцию сотановки события и добавления выбранного товара в корзину
-// добавить слушатель на остальной контент -> вызвать функцию полного открытия попапа 
-
-
-// при скролле вверх добавлять header_scroll в хэдер
-
-// добавить ссылку в логотип в попапе
-// добавиьт ссылку в ревью
-// удалить селект и добавлять его с помощью js
-// ограничить выпадающий список по ширине 
-// изменить положение попапа
-
-
-purchaseButton.addEventListener('click', getSelectedItem);
-
-
-
-
-let scroll = 0;
-
-document.addEventListener('scroll', (evt) => {
-  setPurchaseOpen();
-  showHeader();
-});
+function buyItem() {
+  isSelected();
+}
 
 function showHeader() {
   if (scroll > window.pageYOffset) {
@@ -92,19 +54,28 @@ function showHeader() {
 function setPurchaseOpen() {
   if (window.pageYOffset >= purchase.getBoundingClientRect().bottom + purchaseheigth) {
     purchase.classList.add('purchase_sticky');
-    // document.removeEventListener('scroll', setPurchaseOpen);
+    document.removeEventListener('scroll', setPurchaseOpen);
+  }
+}
+
+function showFullPurchaseVertion() {
+  if (document.documentElement.clientWidth < 1071) {
+    purchase.classList.toggle('purchase_sticky');
+    purchase.classList.toggle('purchase_sticky_open');
   }
 }
 
 
 
+purchaseList.addEventListener(('change'), (evt) => {
+  cleanSelectedElements(evt);
+  setSelectedElement(evt);
+})
+
+purchaseButton.addEventListener('click', buyItem);
+
+document.addEventListener('scroll', setPurchaseOpen);
+
+document.addEventListener('scroll', showHeader);
 
 purchaseInfo.addEventListener('click', showFullPurchaseVertion);
-
-
-function showFullPurchaseVertion() {
-  purchase.classList.remove('purchase_sticky');
-}
-
-
-
