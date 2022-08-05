@@ -1,4 +1,4 @@
-.header {
+.currency-choice {
   position: absolute;
   width: 100%;
   box-sizing: border-box;
@@ -9,7 +9,7 @@
   padding: 13px 20px 13px 25px;
 }
 
-.header::after {
+.currency-choice::after {
   content: "";
   top: 0;
   left: 0;
@@ -23,7 +23,7 @@
 }
 
 @media (min-width: 768px) {
-  .header {
+  .currency-choice {
     padding: 13px 11.5%;
 
     /* delete background size  */
@@ -32,23 +32,23 @@
     left: 0;
   }
 
-  .header::after {
+  .currency-choice::after {
     box-shadow: none;
   }
 }
 
 @media (min-width: 1440px) {
-  .header {
+  .currency-choice {
     padding: 13px 165px;
   }
 }
 
-.header__logo {
+.currency-choice__logo {
   display: block;
   max-width: 156px;
 }
 
-.header__currency-list {
+.currency-choice__list {
   text-transform: uppercase;
   border: none;
   padding: 9px;
@@ -65,10 +65,10 @@
 
 /* for scrolling up*/
 
-.header_scroll {
+.currency-choice_scroll {
   position: fixed;
 }
 
-.header_scroll::after {
+.currency-choice_scroll::after {
   opacity: 0.8;
 }

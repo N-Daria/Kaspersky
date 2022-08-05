@@ -1,12 +1,4 @@
-const header = document.querySelector('.header');
-const purchase = document.querySelector('.purchase');
-const purchaseheigth = purchase.getBoundingClientRect().height;
-const purchaseInfo = purchase.querySelector('.purchase__info');
-const purchaseButton = purchase.querySelector('.purchase__button');
-const purchaseList = purchase.querySelector('.purchase__options');
-const purchaseListItems = Array.from(purchaseList.options);
-let scroll = 0;
-
+// checks if element was selected by default
 
 function isSelected() {
   let selectedElement = purchaseList.querySelector('.purchase__option[selected]');
@@ -19,6 +11,8 @@ function isSelected() {
   return selectedElement
 }
 
+// removes selected attributes for every element
+
 function cleanSelectedElements() {
   purchaseListItems.forEach((element) => {
     if (element.hasAttribute('selected')) {
@@ -26,6 +20,8 @@ function cleanSelectedElements() {
     }
   })
 }
+
+// adds attribute to element
 
 function setSelectedElement(evt) {
   let selectedElement = null;
@@ -38,18 +34,25 @@ function setSelectedElement(evt) {
   selectedElement.setAttribute('selected', 'selected')
 }
 
-function buyItem() {
-  isSelected();
+// able to send data
+
+function buyItem(evt) {
+  evt.preventDefault();
+  const elementData = isSelected().value;
 }
 
-function showHeader() {
+// hide or show currency block
+
+function showCurrency() {
   if (scroll > window.pageYOffset) {
-    header.classList.add('header_scroll');
+    header.classList.add('currency-choice_scroll');
   } if (scroll < window.pageYOffset) {
-    header.classList.remove('header_scroll');
+    header.classList.remove('currency-choice_scroll');
   }
   scroll = window.pageYOffset;
 }
+
+// set sticky mode for purchase block 
 
 function setPurchaseOpen() {
   if (window.pageYOffset >= purchase.getBoundingClientRect().bottom + purchaseheigth) {
@@ -57,6 +60,8 @@ function setPurchaseOpen() {
     document.removeEventListener('scroll', setPurchaseOpen);
   }
 }
+
+// show or hide full version of purchase block 
 
 function showFullPurchaseVertion() {
   if (document.documentElement.clientWidth < 1071) {
@@ -72,10 +77,11 @@ purchaseList.addEventListener(('change'), (evt) => {
   setSelectedElement(evt);
 })
 
-purchaseButton.addEventListener('click', buyItem);
+formBuy.addEventListener('submit', buyItem);
 
+// will be deleted
 document.addEventListener('scroll', setPurchaseOpen);
 
-document.addEventListener('scroll', showHeader);
+document.addEventListener('scroll', showCurrency);
 
 purchaseInfo.addEventListener('click', showFullPurchaseVertion);

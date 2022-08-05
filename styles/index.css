@@ -3,7 +3,7 @@
 
 @import url(../styles/page.css);
 
-@import url(./header/header.css);
+@import url(./currency-choice/currency-choice.css);
 @import url(./content/content.css);
 @import url(./compatibility/compatibility.css);
 @import url(./purchase/purchase.css);
