@@ -1,5 +1,6 @@
 .content {
-  position: relative;
+  /* delete background size  */
+  /* position: relative; */
   padding: 424px 24px 0;
 }
 

@@ -25,7 +25,11 @@
 @media (min-width: 768px) {
   .header {
     padding: 13px 11.5%;
-    max-width: 1440px;
+
+    /* delete background size  */
+
+    /* max-width: 1440px; */
+    left: 0;
   }
 
   .header::after {
