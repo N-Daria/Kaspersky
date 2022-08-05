@@ -361,5 +361,6 @@
   .purchase_sticky {
     position: fixed;
     top: 42px;
+    width: 100%;
   }
 }
