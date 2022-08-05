@@ -57,22 +57,22 @@
 } 
 
 .compatibility__list-item_windows {
-  background-image: url(/images/logo/windows_logos_PNG25.svg);
+  background-image: url(../../images/logo/windows_logos_PNG25.svg);
   width: 47px;
 }
 
 .compatibility__list-item_macOS {
-  background-image: url(/images/logo/1280px-MacOS_wordmark.svg);
+  background-image:  url(../../images/logo/1280px-MacOS_wordmark.svg);
   width: 87px;
 }
 
 .compatibility__list-item_android {
-  background-image: url(/images/logo/Android_symbol_green_RGB.svg);
+  background-image:  url(../../images/logo/Android_symbol_green_RGB.svg);
   width: 60px;
 }
 
 .compatibility__list-item_ios {
-  background-image: url(/images/logo/IOS_logo_2010.svg);
+  background-image:  url(../../images/logo/IOS_logo_2010.svg);
   width: 60px;
 }
 
