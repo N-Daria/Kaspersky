@@ -1,0 +1,14 @@
+.purchase__new-price {
+  margin: 0;
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 1;
+  color: #1D1D1B;
+}
+
+@media (min-width: 1072px) {
+  .purchase__new-price {
+    font-size: 64px;
+    line-height: 1.25;  
+  }
+}

@@ -1,0 +1,20 @@
+.purchase__options {
+  border: 2px solid #1D1D1B;
+  background-color: #15C1A1;
+  width: 100%;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  padding: 12px 6px;
+}
+
+@media (min-width: 1072px) {
+  .purchase__options {
+    max-width: 190px;
+  }
+}
+
+.purchase__option[selected] {
+  background-color: #7FE3CE;
+}

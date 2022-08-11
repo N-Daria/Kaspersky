@@ -1,0 +1,15 @@
+.purchase__text-block { 
+  display: flex;
+  flex-wrap: wrap; 
+  width: 70%;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 1072px) {
+  .purchase__text-block {
+    margin-bottom: 0;
+    width: 100%;
+    display: inline-block;
+    max-width: 350px;
+  }
+}

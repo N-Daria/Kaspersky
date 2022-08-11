@@ -1,0 +1,11 @@
+.purchase__buy {
+  margin-top: 20px;
+}
+
+@media (min-width: 1072px) {
+  .purchase__buy {
+    display: flex;
+    margin: 0 0 0 30px;
+    align-items: center;
+  }
+}

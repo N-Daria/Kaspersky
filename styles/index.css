@@ -14,6 +14,25 @@
 @import url(./content/__text/content__text.css);
 
 @import url(./compatibility/compatibility.css);
+
 @import url(./purchase/purchase.css);
+@import url(./purchase/__button/purchase__button.css);
+@import url(./purchase/__buy/purchase__buy.css);
+@import url(./purchase/__header/purchase__header.css);
+@import url(./purchase/__info/purchase__info.css);
+@import url(./purchase/__logo/purchase__logo.css);
+@import url(./purchase/__new-price/_size_small/purchase__new-price_size_small.css);
+@import url(./purchase/__new-price/purchase__new-price.css);
+@import url(./purchase/__old-price/_size_small/purchase__old-price_size_small.css);
+@import url(./purchase/__old-price/purchase__old-price.css);
+@import url(./purchase/__options/purchase__options.css);
+@import url(./purchase/__price/purchase__price.css);
+@import url(./purchase/__review/purchase__review.css);
+@import url(./purchase/__star/_half/purchase__star_half.css);
+@import url(./purchase/__star/purchase__star.css);
+@import url(./purchase/__stars/purchase__stars.css);
+@import url(./purchase/__text-block/purchase__text-block.css);
+@import url(./purchase/_sticky/_open/purchase_sticky_open.css);
 @import url(./purchase/_sticky/purchase_sticky.css);
+
 @import url(./other/other.css);

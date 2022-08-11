@@ -1,0 +1,12 @@
+.purchase__stars {
+  display: flex;
+  margin-right: 8px;
+}
+
+@media (min-width: 1072px) {
+  .purchase__stars {
+    max-width: 40%;
+    display: inline-flex; 
+    margin-right: 4px;
+ }
+}

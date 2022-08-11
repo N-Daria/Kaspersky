@@ -1,0 +1,9 @@
+.purchase_sticky_open {
+  position: fixed;
+  width: 100%;
+  bottom: 5px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+

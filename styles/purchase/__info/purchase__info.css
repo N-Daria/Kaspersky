@@ -1,0 +1,10 @@
+.purchase__info {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 1072px) {
+  .purchase__info {
+    flex-wrap: nowrap;
+  }
+}

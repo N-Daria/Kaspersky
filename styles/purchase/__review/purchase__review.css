@@ -1,0 +1,16 @@
+.purchase__review {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.2;
+  margin: 0;
+  text-decoration: none;
+  color: inherit;
+}
+
+@media (min-width: 1072px) {
+  .purchase__review {
+    display: inline;
+    max-width: 40%;
+    vertical-align: super;
+  }
+}
