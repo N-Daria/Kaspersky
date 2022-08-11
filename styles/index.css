@@ -7,4 +7,5 @@
 @import url(./content/content.css);
 @import url(./compatibility/compatibility.css);
 @import url(./purchase/purchase.css);
-@import url(./footer/footer.css);
+@import url(./purchase/_sticky/purchase_sticky.css);
+@import url(./other/other.css);

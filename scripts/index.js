@@ -45,32 +45,28 @@ function buyItem(evt) {
 
 function showCurrency() {
   if (scroll > window.pageYOffset) {
-    header.classList.add('currency-choice_scroll');
+    currencyHeader.classList.add('currency-choice_scroll');
   } if (scroll < window.pageYOffset) {
-    header.classList.remove('currency-choice_scroll');
+    currencyHeader.classList.remove('currency-choice_scroll');
   }
   scroll = window.pageYOffset;
 }
 
-// set sticky mode for purchase block 
+// set sticky mode for purchase block on mobile
 
-function setPurchaseOpen() {
-  if (window.pageYOffset >= purchase.getBoundingClientRect().bottom + purchaseheigth) {
+function closeFullPurchaseSticky() {
+  if (window.innerHeight - purchase.getBoundingClientRect().bottom > 0) {
     purchase.classList.add('purchase_sticky');
-    document.removeEventListener('scroll', setPurchaseOpen);
+    document.removeEventListener('scroll', closeFullPurchaseSticky);
   }
 }
 
 // show or hide full version of purchase block 
 
 function showFullPurchaseVertion() {
-  if (document.documentElement.clientWidth < 1071) {
-    purchase.classList.toggle('purchase_sticky');
-    purchase.classList.toggle('purchase_sticky_open');
-  }
+  purchase.classList.toggle('purchase_sticky');
+  purchase.classList.toggle('purchase_sticky_open');
 }
-
-
 
 purchaseList.addEventListener(('change'), (evt) => {
   cleanSelectedElements(evt);
@@ -79,9 +75,11 @@ purchaseList.addEventListener(('change'), (evt) => {
 
 formBuy.addEventListener('submit', buyItem);
 
-// will be deleted
-document.addEventListener('scroll', setPurchaseOpen);
-
 document.addEventListener('scroll', showCurrency);
 
-purchaseInfo.addEventListener('click', showFullPurchaseVertion);
+// only for mobile version
+
+if (document.documentElement.clientWidth <= 1071) {
+  purchaseInfo.addEventListener('click', showFullPurchaseVertion);
+  document.addEventListener('scroll', closeFullPurchaseSticky);
+}
