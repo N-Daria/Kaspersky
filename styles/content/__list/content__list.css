@@ -1,0 +1,12 @@
+.content__list {
+  margin: 23px 0;
+  padding-left: 26px;
+  list-style-type: none;
+  list-style-image: url(../../../images/stroke.svg);
+}
+
+@media (min-width: 768px) {
+  .content__list {
+    margin: 52px 0;
+  }
+}

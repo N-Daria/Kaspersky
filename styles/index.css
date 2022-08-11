@@ -4,7 +4,15 @@
 @import url(../styles/page.css);
 
 @import url(./currency-choice/currency-choice.css);
+
 @import url(./content/content.css);
+@import url(./content/__header/content__header.css);
+@import url(./content/__info/content__info.css);
+@import url(./content/__list-item/_dimmed/content__list-item_dimmed.css);
+@import url(./content/__list-item/content__list-item.css);
+@import url(./content/__list/content__list.css);
+@import url(./content/__text/content__text.css);
+
 @import url(./compatibility/compatibility.css);
 @import url(./purchase/purchase.css);
 @import url(./purchase/_sticky/purchase_sticky.css);
