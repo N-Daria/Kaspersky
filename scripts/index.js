@@ -54,10 +54,15 @@ function showCurrency() {
 
 // set sticky mode for purchase block on mobile
 
-function closeFullPurchaseSticky() {
+function addsPurchaseSticky() {
   if (window.innerHeight - purchase.getBoundingClientRect().bottom > 0) {
     purchase.classList.add('purchase_sticky');
-    document.removeEventListener('scroll', closeFullPurchaseSticky);
+  }
+}
+
+function removesPurchaseSticky() {
+  if (header.getBoundingClientRect().bottom - purchase.getBoundingClientRect().bottom > 0) {
+    purchase.classList.remove('purchase_sticky');
   }
 }
 
@@ -81,5 +86,7 @@ document.addEventListener('scroll', showCurrency);
 
 if (document.documentElement.clientWidth <= 1071) {
   purchaseInfo.addEventListener('click', showFullPurchaseVertion);
-  document.addEventListener('scroll', closeFullPurchaseSticky);
+  document.addEventListener('scroll', () => {
+    purchase.classList.contains('purchase_sticky') ? removesPurchaseSticky() : addsPurchaseSticky();
+  });
 }
