@@ -2,7 +2,7 @@
   width: 50px;
   height: 62px;
   display: inline-block;
-  background-image:  url(../../images/Group.svg);
+  background-image:  url(../../../images/Group.svg);
   background-repeat: no-repeat;
   background-size: 50px;
   background-position: center bottom;
@@ -16,6 +16,6 @@
     background-size: 80px;
     background-position: center;
     margin-right: 28px;
-    background-image:  url(../../images/kasperskyDesctopIcon.svg);
+    background-image:  url(../../../images/kasperskyDesctopIcon.svg);
   }
 }
